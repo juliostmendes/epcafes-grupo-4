@@ -33,10 +33,10 @@ public class CadastroTalhaoController {
         return "talhao/talhao";
     }
 
-//    @PutMapping("/{id}")
-//    public Talhao atualizarTalhao(@PathVariable Long id, @RequestBody Talhao novoTalhao) {
-//        return talhaoService.atualizarTalhao(id, novoTalhao);
-//    }
+    @PutMapping("/{id}")
+    public Talhao atualizarTalhao(@PathVariable Long id, @RequestBody Talhao novoTalhao) {
+        return talhaoService.atualizarTalhao(id, novoTalhao);
+    }
 
     @GetMapping("/{id}")
     public void deletarTalhao(@PathVariable(value = "id") Long id) {
