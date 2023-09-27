@@ -2,17 +2,17 @@
 <html lang="pt" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Talhao</title>
+    <title>Cadastro de Unidade</title>
 </head>
 <body>
-    <h1>Cadastro de Talhao</h1>
+    <h1>Cadastro de Unidade</h1>
     
     <form th:action="@{/cadastro-unidade/salvar}" method="post">
-        <label for="nome">Nome do talhao:</label>
+        <label for="nome">Nome da Unidade:</label>
         <input type="text" id="nome" name="nome" th:field="*{nome}" required><br>
         
-        <label for="area">Area:</label>
-        <input type="text" id="area" name="area" th:field="area" required><br>
+        <label for="contato">Contato:</label>
+        <input type="text" id="contato" name="contato" th:field="contato" required><br>
         
         <input type="submit" value="Salvar">
     </form>

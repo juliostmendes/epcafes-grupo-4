@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa de Unidade</title>
+</head>
+<body>
+    <h1>Pesquisa de Unidade</h1>
+    
+    <form th:action="@{/pesquisa-unidade/pesquisar}" method="get">
+        <label for="nomePesquisa">Nome da Unidade:</label>
+        <input type="text" id="nomePesquisa" name="nomePesquisa">
+        
+        <input type="submit" value="Pesquisar">
+    </form>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Contato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="unidade : ${unidades}">
+                <td th:text="${unidade.codigo"></td>
+                <td th:text="${unidade.nome}"></td>
+                <td th:text="${unidade.contato}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

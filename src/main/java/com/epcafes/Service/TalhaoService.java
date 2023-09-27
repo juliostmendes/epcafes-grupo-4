@@ -30,7 +30,7 @@ public class TalhaoService {
 
     @GetMapping("/{id}")
     public Optional<Talhao> buscarTalhao(@PathVariable Long id) {
-        return talhaoRepository.findById(id).orElse(null);
+        return talhaoRepository.findById(id);
     }
 
     @PutMapping("/{id}")

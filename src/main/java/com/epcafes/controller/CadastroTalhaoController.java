@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.epcafes.Service.TalhaoService;
 import com.epcafes.model.Talhao;
-
-import br.com.sapc.entities.Morador;
 
 @Controller
 @RequestMapping("/talhoes")
@@ -47,13 +44,13 @@ public class CadastroTalhaoController {
         talhaoService.deletarTalhao(id);
     }
     
-    @GetMapping("/deletar/{id}")
-	public String deletarMorador(@PathVariable(value = "id") Long id) {
-		Optional<Morador> moradorOptional = moradorService.findById(id);
-		if(!moradorOptional.isPresent()) {
-			
-		}
-		moradorService.delete(moradorOptional.get());
-		return "redirect:/morador";
-	}
+//    @GetMapping("/deletar/{id}")
+//	public String deletarMorador(@PathVariable(value = "id") Long id) {
+//		Optional<Morador> moradorOptional = moradorService.findById(id);
+//		if(!moradorOptional.isPresent()) {
+//			
+//		}
+//		moradorService.delete(moradorOptional.get());
+//		return "redirect:/morador";
+//	}
 }
